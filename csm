@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我找找bug(ง •_•)ง</title>
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        setTimeout(function(){window.top.location="http://www.aigei.com/"},10000)
+    </script>
+</body>
+
+</html>
