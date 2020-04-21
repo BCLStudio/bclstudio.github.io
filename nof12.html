@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function click(e) {
+            if (window.parent.document.all) {
+                if (event.button == 2 || event.button == 3) {
+                    alert("本贴禁止f12哦");
+                    οncοntextmenu = 'return false';
+                }
+            }
+            if (window.parent.document.layers) {
+                if (e.which == 3) {
+                    οncοntextmenu = 'return false';
+                }
+            }
+        }
+        if (document.layers) {
+            document.captureEvents(Event.MOUSEDOWN);
+        }
+        window.parent.document.οnmοusedοwn = click;
+        window.parent.document.oncontextmenu = new Function("return false;")
+        window.parent.document.onkeydown = window.parent.document.onkeyup = window.parent.document.οnkeypress = function () {
+            if (window.event.keyCode == 123) {
+                window.event.returnValue = false;
+                return (false);
+            }
+        }
+    </script>
+</body>
+
+</html>
